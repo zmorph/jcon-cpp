@@ -88,7 +88,7 @@ signals:
     void socketError(QObject* socket, QAbstractSocket::SocketError error);
 
     /// Emitted when an unsolicited notification is received
-    void notificationReceived(const QString& key, const QVariant& value);
+    void notificationReceived(const QString& method, const QJsonArray& params);
 
 protected:
     void logError(const QString& msg);

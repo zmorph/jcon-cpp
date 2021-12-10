@@ -1,20 +1,20 @@
 
-#SOURCES +=     $$PWD/jcon/string_util.cpp \
-#    $$PWD/jcon/json_rpc_websocket_server.cpp \
-#    $$PWD/jcon/json_rpc_websocket_client.cpp \
-#    $$PWD/jcon/json_rpc_websocket.cpp \
-#    $$PWD/jcon/json_rpc_tcp_socket.cpp \
-#    $$PWD/jcon/json_rpc_tcp_server.cpp \
-#    $$PWD/jcon/json_rpc_tcp_client.cpp \
-#    $$PWD/jcon/json_rpc_success.cpp \
-#    $$PWD/jcon/json_rpc_server.cpp \
-#    $$PWD/jcon/json_rpc_request.cpp \
-#    $$PWD/jcon/json_rpc_logger.cpp \
-#    $$PWD/jcon/json_rpc_file_logger.cpp \
-#    $$PWD/jcon/json_rpc_error.cpp \
-#    $$PWD/jcon/json_rpc_endpoint.cpp \
-#    $$PWD/jcon/json_rpc_debug_logger.cpp \
-#    $$PWD/jcon/json_rpc_client.cpp
+SOURCES +=     $$PWD/jcon/string_util.cpp \
+    $$PWD/jcon/json_rpc_websocket_server.cpp \
+    $$PWD/jcon/json_rpc_websocket_client.cpp \
+    $$PWD/jcon/json_rpc_websocket.cpp \
+    $$PWD/jcon/json_rpc_tcp_socket.cpp \
+    $$PWD/jcon/json_rpc_tcp_server.cpp \
+    $$PWD/jcon/json_rpc_tcp_client.cpp \
+    $$PWD/jcon/json_rpc_success.cpp \
+    $$PWD/jcon/json_rpc_server.cpp \
+    $$PWD/jcon/json_rpc_request.cpp \
+    $$PWD/jcon/json_rpc_logger.cpp \
+    $$PWD/jcon/json_rpc_file_logger.cpp \
+    $$PWD/jcon/json_rpc_error.cpp \
+    $$PWD/jcon/json_rpc_endpoint.cpp \
+    $$PWD/jcon/json_rpc_debug_logger.cpp \
+    $$PWD/jcon/json_rpc_client.cpp
 
 HEADERS += \
     $$PWD/jcon/string_util.h \

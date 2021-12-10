@@ -302,15 +302,30 @@ void JsonRpcClient::jsonResponseReceived(const QJsonObject& response)
     }
 
     if (m_allowNotification && !response.contains("id")) {
-        if (response["key"].isUndefined() || response["value"].isUndefined()) {
-            logError("key/value is undefined");
+
+        auto methodJsonValue = response["method"];
+        auto paramsJsonValue = response["params"];
+
+        if(methodJsonValue.isUndefined()){
+            logError("Notification method is undefined");
             return;
         }
 
-        QString key = response.value("key").toString();
-        QVariant value = response.value("value").toVariant();
+        if(paramsJsonValue.isUndefined()){
+            logError("Notification params is undefined");
+            return;
+        }
 
-        emit notificationReceived(key, value);
+        if(!paramsJsonValue.isArray()){
+            logError("Notification params is not an array");
+            return;
+        }
+
+
+        auto method = methodJsonValue.toString();
+        auto params = paramsJsonValue.toArray();
+
+        emit notificationReceived(method, params);
         return;
     }
 
